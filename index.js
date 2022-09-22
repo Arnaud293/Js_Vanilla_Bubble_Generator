@@ -1,4 +1,9 @@
 
+const count = document.querySelector('h3');
+let counter = 0;
+const allCreatedBubbles = document.querySelector('.created-bubbles');
+let allBubbles = 0;
+
 const bubbleMaker = () => {
 
     const bubble = document.createElement('span');
@@ -17,10 +22,18 @@ const bubbleMaker = () => {
 
     bubble.style.setProperty('--left', Math.random()* 100 * plusMinus + '%');
 
+    bubble.addEventListener('click', () => {
+        bubble.remove();
+        counter ++;
+        count.textContent = counter;
+    })
+
     setTimeout(() => {
         bubble.remove();
     }, 8000)
 
+    allBubbles ++;
+    allCreatedBubbles.textContent = allBubbles;
 }
 
 setInterval(bubbleMaker, 500);
