@@ -1,8 +1,8 @@
 
 const count = document.querySelector('h3');
 let counter = 0;
-const allCreatedBubbles = document.querySelector('.created-bubbles');
-let allBubbles = 0;
+// const allCreatedBubbles = document.querySelector('.created-bubbles');
+// let allBubbles = 0;
 
 const bubbleMaker = () => {
 
@@ -32,8 +32,8 @@ const bubbleMaker = () => {
         bubble.remove();
     }, 8000)
 
-    allBubbles ++;
-    allCreatedBubbles.textContent = allBubbles;
+    // allBubbles ++;
+    // allCreatedBubbles.textContent = allBubbles;
 }
 
 setInterval(bubbleMaker, 500);
